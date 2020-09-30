@@ -24,7 +24,7 @@
 
 .toolbar {
   height: 100%;
-  width: 64%;
+  /* width: 64%; */
   background: white;
   box-shadow: 2px 0px 5px rgba(0, 0, 0, 0.5);
   position: fixed;
@@ -54,7 +54,7 @@
   list-style: none;
   display: flex;
   flex-direction: column;
-  padding-top: 40px;
+  padding: 40px 0 0 0;
 }
 
 .toolbar li {
@@ -87,9 +87,9 @@
   width: 8%;
 }
 
-#toolbar_button {
-  width: initial;
-  padding: 20px 36px;
+.toolbar_button {
+  width: initial!important;
+  padding: 20px 36px!important;
 }
 @media (min-width: 769px) {
   .ham {
