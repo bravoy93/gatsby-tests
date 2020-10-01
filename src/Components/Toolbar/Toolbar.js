@@ -8,11 +8,12 @@ import { fbPxTrigger } from "../../index";
 
 
 const ToolbarItem = props => (  
-  <li className={`toolbar_item ${styles.toolbar_item}`}>
-    <Link to={props.to} style={{ textDecoration: "none" }} onClick={() => props.to_top()} onKeyPress={() => props.to_top()}>
+  <Link to={props.to} style={{ textDecoration: "none" }} onClick={() => props.to_top()} onKeyPress={() => props.to_top()}>
+    <li className={`toolbar_item ${styles.toolbar_item}`}>
       {props.label}
-    </Link>
-  </li>)
+    </li>
+  </Link>
+  )
 
 const toolbar = (props) => {
   let toolbarClasses = `toolbar ${styles.toolbar}`;
@@ -21,7 +22,7 @@ const toolbar = (props) => {
   }
 
   const handleEnrollClick = () => {
-    fbPxTrigger();
+    fbPxTrigger({goEmbed:false});
     props.to_top()
   }
   
@@ -35,14 +36,17 @@ const toolbar = (props) => {
       tabIndex="-1">
         <div>
           <ul>
-            <li className={`toolbar_item ${styles.toolbar_item}`}>
-              <a href="/enroll" 
-              style={{ textDecoration: "none" }}
-              onClick={handleEnrollClick}
-              onKeyPress={handleEnrollClick}>
-               Enroll
-              </a> 
-            </li>
+            <a href="https://unifiedhealthadvisors.com/enroll"
+            target="_blank"
+            rel="noreferrer"
+            style={{ textDecoration: "none" }}
+            onClick={handleEnrollClick}
+            onKeyPress={handleEnrollClick}
+            >
+              <li className={`toolbar_item ${styles.toolbar_item}`}>
+               Enroll               
+              </li>
+            </a>
             <ToolbarItem to="/dental/" label="Dental" to_top={props.to_top} />
             <ToolbarItem to="/vision/" label="Vision / Hearing" to_top={props.to_top} />
             <ToolbarItem to="/about/" label="About" to_top={props.to_top} />
