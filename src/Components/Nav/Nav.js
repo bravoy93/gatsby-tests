@@ -5,12 +5,14 @@ import {fbPxTrigger} from "../../index"
 import Hamburger from "../Toolbar/ToolbarToggleButton.js";
 
 const NavLink = props => (
-  <Link to={props.to} 
-    style={{ textDecoration: "none" }}
-    onClick={() => props.to_top()}
-    onKeyPress={() => props.to_top()}>
-    <li>{props.label}</li>
-  </Link>
+  <li>
+    <Link to={props.to} 
+      style={{ textDecoration: "none" }}
+      onClick={() => props.to_top()}
+      onKeyPress={() => props.to_top()}>
+      {props.label}
+    </Link>
+  </li>
 )
 
 export default function Nav(props) {
@@ -34,21 +36,25 @@ export default function Nav(props) {
   //   value = stateValue;
   // },[value]); // Only re-run the effect if 'value' changes, like a Vue watcher
 
+  const onLogoClick = (e='') => {
+    const path = typeof window !== 'undefined' ? window.location.pathname : '';
+    if(e && path === '/') e.preventDefault();
+    props.to_top()
+  }
+
   return (
     <div className={nav_wrapper_class}>
-      <div>
-        <Link to="/" 
-        onClick={() => props.to_top()}
-        onKeyPress={() => props.to_top()}>
+      <div 
+        role="button"
+        tabIndex="-1"
+        onClick={(e) => {onLogoClick(e)}}
+        onKeyPress={(e) => {onLogoClick(e)}}>
+        <Link to="/">
           <img
             src={icon}
             alt="Unified Health Icon"
             className={`cfd_icon_mobile ${styles.cfd_icon_mobile}`}
           />
-        </Link>
-        <Link to="/"
-            onClick={() => props.to_top()}
-            onKeyPress={() => props.to_top()}>
           <img
             src={logo}
             alt="Unified Health Logo"
@@ -63,9 +69,11 @@ export default function Nav(props) {
       </div>
       <div className={items_nav}>
         <ul>
-          <a href="https://unifiedhealthadvisors.com/enroll" target="_blank" rel="noreferrer" onClick={()=>fbPxTrigger({goEmbed: false})} style={{ textDecoration: "none" }}>
-            <li>Enroll</li>
-          </a>         
+          <li>
+            <a href="https://unifiedhealthadvisors.com/enroll" target="_blank" rel="noreferrer" onClick={()=>fbPxTrigger({goEmbed: false})} style={{ textDecoration: "none" }}>
+              Enroll
+            </a>
+          </li>        
           <NavLink to="/dental/" label="Dental" to_top={props.to_top} />
           <NavLink to="/vision/" label="Vision/Hearing" to_top={props.to_top} />
           <NavLink to="/about/" label="About Us" to_top={props.to_top} />

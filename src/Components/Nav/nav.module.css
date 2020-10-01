@@ -41,21 +41,21 @@
   position: relative;
 }
 
-.items_nav li {
+.items_nav li a{
   padding: 0 1rem;
   color: #1f497d;
   position: relative;
 }
 
-.nav_text_scrolled li {
+.nav_text_scrolled li a{
   color: #ffffff;
 }
 
-.items_nav li:hover {
+.items_nav li a:hover {
   color: #28aee4;
   cursor: pointer;
 }
-.items_nav li:active {
+.items_nav li a:active {
   color: #df3063;
   /* font-weight: bold; */
 }

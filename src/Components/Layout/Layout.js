@@ -1,20 +1,36 @@
 import React, {useState} from "react"
-import ReactDOM from "react-dom"
+// import ReactDOM from "react-dom"
 import Nav from "../Nav/Nav"
-import Backdrop from "../Backdrop/Backdrop";
+import Backdrop from "../Backdrop/Backdrop"
 import Toolbar from "../Toolbar/Toolbar"
-
-// let toolbarOpen = false;
+import Footer from "../Footer/Footer"
+import {breakpoint} from "./breakpointConfig";
 
 export default function Layout({children}) {
   const [toolbarOpen, setToolbarOpen] = useState(false);
-  const toTop = () => {
-    handleScrollToElement("nav");
+  const [scrolled, setScrolled] = useState(false)
+
+  const scrollListener = () => {
+    setScrolled(window.scrollY > 80)
   };
 
-  function handleScrollToElement(elRef) {
-    const tesNode = ReactDOM.findDOMNode(this.refs[elRef]);
-    window.scrollTo({ top: tesNode.offsetTop, behavior: "smooth" });
+  React.useEffect(() => {
+    window.addEventListener("scroll", scrollListener);
+    window.addEventListener( "resize",()=> breakpoint.breakpointWidth = window.screen.width);
+    breakpoint.breakpointWidth = window.screen.width;
+    return () => {
+      window.removeEventListener("scroll", scrollListener);
+      window.removeEventListener( "resize",()=> breakpoint.breakpointWidth = window.screen.width);
+    }
+  },[]);
+
+  const toTop = () => {
+    handleScrollToElement(/*"nav"*/);
+  };
+
+  function handleScrollToElement(/*elRef*/) {
+    // const tesNode = ReactDOM.findDOMNode(this.refs[elRef]);
+    window.scrollTo({ top: 0, behavior: "smooth" });
   }
   
   const toolbarToggleClickHandler = () => {
@@ -35,7 +51,7 @@ export default function Layout({children}) {
     <>      
       <Nav 
         toolbarToggleClickHandler={toolbarToggleClickHandler}
-        scrolled={true}
+        scrolled={scrolled}
         to_top={toTop}/>
       <div id="nav"/>
       {children}
@@ -44,6 +60,7 @@ export default function Layout({children}) {
         show={toolbarOpen}
         backdropClickHandler={backdropClickHandler}
         to_top={toTop}/>
+      <Footer to_top={toTop}/>
     </>
   )
 }
