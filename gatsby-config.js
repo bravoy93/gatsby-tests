@@ -43,5 +43,14 @@ module.exports = {
         anonymize: true,
       }
     },
+    /*Hotjar*/
+    {
+      resolve: `gatsby-plugin-hotjar`,
+      options: {
+        includeInDevelopment: false, // optional parameter to include script in development
+        id: 1920090,
+        sv: 6,
+      },
+    },
   ],
 }
