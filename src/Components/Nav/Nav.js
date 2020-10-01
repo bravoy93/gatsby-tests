@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "gatsby";
 import styles from "./nav.module.css";
-import { fbPxTrigger } from "../../index.js";
+import {fbPxTrigger} from "../../index"
 import Hamburger from "../Toolbar/ToolbarToggleButton.js";
 
 const NavLink = props => (
@@ -12,10 +12,6 @@ const NavLink = props => (
     <li>{props.label}</li>
   </Link>
 )
-
-// const handleChange = () => {
-//   console.log('Tab changed!');
-// }
 
 export default function Nav(props) {
   let nav_wrapper_class = `nav_wrapper ${styles.nav_wrapper}`;
@@ -32,7 +28,12 @@ export default function Nav(props) {
   }
   if (!props.scrolled) {
     logo = logo_dark;
-  }
+  } 
+
+  // React.useEffect(() => {
+  //   value = stateValue;
+  // },[value]); // Only re-run the effect if 'value' changes, like a Vue watcher
+
   return (
     <div className={nav_wrapper_class}>
       <div>
@@ -62,7 +63,7 @@ export default function Nav(props) {
       </div>
       <div className={items_nav}>
         <ul>
-          <a href="/enroll" onClick={fbPxTrigger} style={{ textDecoration: "none" }}>
+          <a href="https://unifiedhealthadvisors.com/enroll" target="_blank" rel="noreferrer" onClick={()=>fbPxTrigger({goEmbed: false})} style={{ textDecoration: "none" }}>
             <li>Enroll</li>
           </a>         
           <NavLink to="/dental/" label="Dental" to_top={props.to_top} />

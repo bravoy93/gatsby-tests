@@ -6,6 +6,7 @@ export default function About({data}) {
   return (
     <Layout>
       <SEO title="About Us" description="We work hard to find the right Medicare and healthcare solutions, so you don’t have to."/>
-    </Layout>    
+      jaja
+    </Layout>
   )
 }

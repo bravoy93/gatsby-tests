@@ -15,6 +15,7 @@ module.exports = {
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
+    /*Fonts*/
     {
       resolve: 'gatsby-plugin-web-font-loader',
       options: {
@@ -22,6 +23,13 @@ module.exports = {
           families: ['Roboto:300,400,400i,500i,900']
         }
       }
-    }
+    },
+    /*Facebook Pixel*/
+    {
+      resolve: `gatsby-plugin-facebook-pixel`,
+      options: {
+        pixelId: 225246031877134,
+      },
+    },
   ],
 }

@@ -18,8 +18,6 @@ export default function Layout({children}) {
   }
   
   const toolbarToggleClickHandler = () => {
-    // this.setState(prevState => {
-    //   return { toolbarOpen: !prevState.toolbarOpen };
     setToolbarOpen(!toolbarOpen)
     console.log('toolbarToggleClickHandler clickeado')
   };
