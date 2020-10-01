@@ -14,6 +14,14 @@ module.exports = {
     siteUrl: `https://www.unifiedhealthadvisors.com/`
   },
   plugins: [
-    `gatsby-plugin-react-helmet`
+    `gatsby-plugin-react-helmet`,
+    {
+      resolve: 'gatsby-plugin-web-font-loader',
+      options: {
+        google: {
+          families: ['Roboto:300,400,400i,500i,900']
+        }
+      }
+    }
   ],
 }

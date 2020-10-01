@@ -1,6 +1,5 @@
 import React, {useState} from "react"
 import ReactDOM from "react-dom"
-import SEO from "../seo"
 import Nav from "../Nav/Nav"
 import Backdrop from "../Backdrop/Backdrop";
 import Toolbar from "../Toolbar/Toolbar"
@@ -35,8 +34,7 @@ export default function Layout({children}) {
   }
 
   return (
-    <>
-      <SEO title="Unified Health Advisors"/>
+    <>      
       <Nav 
         toolbarToggleClickHandler={toolbarToggleClickHandler}
         scrolled={true}

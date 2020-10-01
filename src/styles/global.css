@@ -6,6 +6,7 @@ body {
   padding: 0 !important;
   margin: 0 !important;
   width: 100vw !important;
+  font-family: 'Roboto', sans-serif;
 }
 #root {
   width: 100vw !important;

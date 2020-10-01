@@ -1,27 +1,11 @@
 import React from "react"
-import { graphql } from "gatsby"
-import Header from "../Components/Header/Header"
 import Layout from "../Components/Layout/Layout"
+import SEO from "../Components/seo"
 
 export default function About({data}) {
   return (
     <Layout>
-      <div className="about page-root">      
-      <Header headerText="About" />
-      <h1>{data.site.siteMetadata.title}</h1>
-      <h1>About Gatsby</h1>
-      <p>Such wow. Very React.</p>
-      </div>
+      <SEO title="About Us" description="We work hard to find the right Medicare and healthcare solutions, so you don’t have to."/>
     </Layout>    
   )
 }
-
-export const query = graphql`
-  query {
-    site {
-      siteMetadata {
-        title
-      }
-    }
-  }
-`
