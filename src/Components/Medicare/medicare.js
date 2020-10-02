@@ -18,7 +18,7 @@ export default function Medicare() {
               Find out what you've been investing in <br /> all this time.
             </p>
             <div className={`medicare-banner-buttons ${selfStyles.medicareBannerButtons}`}>
-            <span
+              <span
                 onClick={() => fbPxTrigger()}
                 onKeyPress={() => fbPxTrigger()}
                 className={`button ${buttonStyles.button} ${selfStyles.button}`}
