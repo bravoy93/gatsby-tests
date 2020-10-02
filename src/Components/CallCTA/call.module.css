@@ -1,0 +1,123 @@
+.call_wrapper {
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: space-around;
+  align-items: center;
+  box-shadow: 0 0 5px 0 #ccc;
+  width: 100vw;
+  background-image: radial-gradient(#fff, #f1f2f2d8);
+}
+.call_container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.logo {
+  width: 48vw;
+  padding: 24px 0px;
+}
+
+.prompt {
+  text-align: center;
+  font-size: 24px;
+  line-height: 1.75;
+  padding: 24px;
+  color: #414042;
+}
+.no_prompt {
+  display: none;
+}
+.call {
+  text-align: center;
+  font-size: 24px;
+  font-weight: 900;
+  line-height: 1.75;
+  margin-bottom: 20px;
+  color: #414042;
+}
+.call_box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border: 2px solid #1f497d;
+  border-radius: 2px;
+  cursor: pointer;
+}
+.call_container p {
+  margin-top: 24px;
+}
+
+.call_box:active {
+  background-color: #1f497d;
+  box-shadow: 0 0 5px 0 #ccc;
+}
+
+.call_box:hover {
+  cursor: pointer;
+  transform: scale(1.002);
+  background-color: #e7e7e7;
+  border: 2px solid #28aee4;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2); /* creates a soft blur effect around the element's edges */
+}
+.number {
+  font-size: 20px;
+  line-height: 48px;
+  color: #1f497d;
+  font-size: 20px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  padding: 0px 32px;
+}
+.number:active {
+  color: #ffff;
+}
+.number:hover {
+  color: #0a9ad7;
+}
+.time {
+  font-size: 12px;
+  padding: 0px;
+}
+
+.call_wrapper img {
+  height: 100px;
+  padding: 24px 0px;
+}
+
+@media (min-width: 769px) {
+  .call_wrapper {
+    width: initial;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 64px;
+    padding: 40px;
+  }
+  .call_container {
+    margin-bottom: 0px;
+  }
+  .call_container p {
+    margin-top: 12px;
+  }
+  .logo {
+    width: 12vw;
+  }
+  .call {
+    font-size: 24px;
+  }
+  .call_box {
+    margin-bottom: 4%;
+  }
+  .number {
+    padding: 0px 40px;
+    font-size: 20px;
+  }
+  .call_wrapper img {
+    height: 180px;
+    padding-left: 24px;
+  }
+}

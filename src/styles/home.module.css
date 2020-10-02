@@ -1,0 +1,375 @@
+.home_wrapper {
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.full_container {
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.full_title {
+  width: 80%;
+  font-size: 32px;
+  font-weight: 900;
+  text-align: left;
+  line-height: 48px;
+  padding: 48px 36px 12px 36px;
+  color: #1f497d;
+}
+.full_title_center {
+  font-size: 40px;
+  font-weight: 900;
+  text-align: center;
+  line-height: 48px;
+  padding: 48px 36px 12px 36px;
+  color: #1f497d;
+  letter-spacing: 1px;
+}
+.full_body {
+  font-size: 20px;
+  line-height: 40px;
+  padding: 0px 36px;
+  text-align: left;
+}
+.full_body_center {
+  width: 80%;
+  font-size: 20px;
+  line-height: 40px;
+  padding: 0px 36px;
+  text-align: center;
+}
+
+.products_container {
+  width: 100vw;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.large-body {
+  text-align: center;
+}
+
+.banner {
+  width: 100vw;
+  background-color: #fff;
+  background-size: cover;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.banner h1 {
+  font-size: 36px;
+  font-weight: 900;
+  line-height: 48px;
+  padding-bottom: 24px;
+  color: #1f497d;
+  /* text-shadow: 0px 2px 4px #414042; */
+}
+.banner p {
+  width: 80%;
+  text-align: center;
+  line-height: 40px;
+  padding-bottom: 40px;
+  color: #6d6e71;
+  font-size: 24px;
+  font-weight: normal;
+}
+.banner img {
+  width: 52vw;
+}
+
+.homeBanner {
+  background-image: url("https://unifiedhealthadvisors.com/aws/home/w7uXIRV_reduced.png");
+  width: 100vw;
+  height: 280px;
+  background-position: right;
+}
+.homeBanner .quote {
+  color: #1f497d;
+  font-weight: bold;
+}
+
+.homeCall {
+  /*background-image: url("https://i.imgur.com/279yx0O.jpg");*/
+  background-position: center;
+  width: 100vw;
+  height: 400px;
+  display: none;
+}
+.homeCall div {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  text-align: center;
+  align-items: center;
+}
+.homeCall .quote {
+  width: 100%;
+}
+
+.homeCall .button {
+  width: auto;
+}
+
+.plansAgentsMembers {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.plansAgentsMembers div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.plansAgentsMembers img {
+  width: 100vw;
+}
+.plansAgentsMembers p {
+  margin-bottom: 40px;
+}
+.agents {
+  flex-direction: column;
+}
+.agents h1 {
+  text-align: left;
+}
+.agents p {
+  text-align: left;
+}
+
+.carrierContainer {
+  width: 100vw;
+  border-bottom: 2px solid #e6e7e8;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.carrierBanner {
+  width: 100vw;
+  background-color: #e6e7e8;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+.carrierBanner img {
+  width: 100px;
+  padding: 12px;
+}
+.smallerIcon {
+  width: 70px !important;
+}
+.homePromo {
+  background-image: url("https://unifiedhealthadvisors.com/aws/home/3HoPGUd_reduced.png");
+  background-position: center;
+  width: 100vw;
+  height: initial;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+.homePromo div {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  text-align: center;
+  align-items: center;
+  padding: 12px 0px;
+}
+.homePromo h1 {
+  color: #1f497d;
+  text-align: center;
+}
+.homePromo p {
+  color: #414042;
+  font-size: 20px;
+  font-weight: normal;
+  padding-bottom: 0px;
+}
+.homePromo .button {
+  width: 80vw;
+}
+
+.privacy {
+  width: initial;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 24px 0px;
+}
+.privacy div {
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+.privacy p {
+  font-size: 16px;
+  font-weight: 200;
+  letter-spacing: 0px;
+  color: #939598;
+}
+
+@media (min-width: 769px) {
+  .home_wrapper {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .large-body {
+    text-align: center;
+  }
+
+  .full_title {
+    font-size: 48px;
+  }
+  .full_title_center {
+    font-size: 48px;
+  }
+  .full_body {
+    margin-bottom: 24px;
+    width: 80%;
+  }
+  .banner img {
+    width: 20vw;
+  }
+  .banner h1 {
+    font-size: 60px;
+  }
+  .banner p {
+    width: 100%;
+    font-size: 28px;
+  }
+  .homeBanner {
+    background-image: url("https://unifiedhealthadvisors.com/aws/home/yPXQeck_reduced.png");
+    background-position: center;
+    height: 46vh;
+  }
+  .homeBanner .quote {
+    padding-top: 32px;
+  }
+
+  .homeCall {
+    background-image: url("https://unifiedhealthadvisors.com/aws/home/7c7Ds8a_reduced.png");
+    background-position: right;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-content: center;
+    margin-bottom: 60px;
+  }
+  .homeCall div {
+    width: 45vw;
+    padding: 20px;
+  }
+  .homeCall h1 {
+    font-size: 40px;
+  }
+  .homeCall p {
+    width: 80%;
+    font-size: 24px;
+    font-weight: normal;
+  }
+
+  .mission {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    margin: 100px;
+  }
+
+  .plansAgentsMembers {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    height: 400px;
+    padding: 12px 40px;
+    margin-bottom: 60px;
+    overflow: hidden;
+  }
+  .plansAgentsMembers p {
+    margin-bottom: 0px;
+  }
+  .plansAgentsMembers div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+  .plansAgentsMembers img {
+    width: 40vw;
+    text-align: right;
+  }
+  .agents {
+    flex-direction: row-reverse !important;
+  }
+  .agents h1 {
+    text-align: right;
+  }
+  .agents p {
+    text-align: left;
+  }
+  .carrierContainer {
+    border-bottom: none;
+  }
+  .carrierBanner img {
+    width: 120px;
+    padding: 24px 8px;
+  }
+  .smallerIcon {
+    width: 70px !important;
+  }
+  .homePromo {
+    background-image: url("https://unifiedhealthadvisors.com/aws/home/cJ350gS_reduced.png");
+    height: 400px;
+    background-position: left;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-content: center;
+    margin-bottom: 60px;
+  }
+  .homePromo div {
+    width: 45vw;
+    padding: 0px;
+  }
+  .homePromo h1 {
+    font-size: 40px;
+    color: #1f497d;
+    width: 80%;
+  }
+  .homePromo p {
+    width: 80%;
+    font-size: 24px;
+    color: #6d6e71;
+    padding-bottom: 12px;
+  }
+  .homePromo .button {
+    width: auto;
+  }
+  .privacy p {
+    font-size: 18px;
+  }
+  .privacy div {
+    width: 80vw;
+    margin-bottom: 64px;
+  }
+}

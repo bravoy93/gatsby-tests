@@ -1,6 +1,6 @@
 export function buildUrl() {
   console.log("--SF Launch");
-  return 'https://www.unifiedhealthadvisors.com/enroll/'
+  return 'https://unifiedhealthadvisors.com/enroll'
 }
 
 export function fbPxTrigger(option={goEmbed:true}) {
@@ -10,6 +10,6 @@ export function fbPxTrigger(option={goEmbed:true}) {
     fbq = window.fbq;
     fbq("track", "ViewContent");
   }
-  console.log("Facebook Pixel Tracker sended");
+  // console.log("Facebook Pixel Tracker sended");
   if(option.goEmbed) window.open("https://unifiedhealthadvisors.com/enroll", "_blank");
 }

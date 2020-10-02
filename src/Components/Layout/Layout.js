@@ -4,24 +4,18 @@ import Nav from "../Nav/Nav"
 import Backdrop from "../Backdrop/Backdrop"
 import Toolbar from "../Toolbar/Toolbar"
 import Footer from "../Footer/Footer"
-import {breakpoint} from "./breakpointConfig";
 
 export default function Layout({children}) {
   const [toolbarOpen, setToolbarOpen] = useState(false);
-  const [scrolled, setScrolled] = useState(false)
+  const [scrolled, setScrolled] = useState(false);  
 
   const scrollListener = () => {
     setScrolled(window.scrollY > 80)
   };
 
   React.useEffect(() => {
-    window.addEventListener("scroll", scrollListener);
-    window.addEventListener( "resize",()=> breakpoint.breakpointWidth = window.screen.width);
-    breakpoint.breakpointWidth = window.screen.width;
-    return () => {
-      window.removeEventListener("scroll", scrollListener);
-      window.removeEventListener( "resize",()=> breakpoint.breakpointWidth = window.screen.width);
-    }
+    window.addEventListener("scroll", scrollListener)
+    return () => window.removeEventListener("scroll", scrollListener)
   },[]);
 
   const toTop = () => {

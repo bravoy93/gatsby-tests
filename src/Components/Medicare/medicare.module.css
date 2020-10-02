@@ -1,0 +1,126 @@
+.medicareBanner {
+  /* background-image: url("https://i.imgur.com/00jKUMd.jpg"); */
+  background-image: url("https://unifiedhealthadvisors.com/aws/medicare/aFyanw2_reduced.jpg");
+  background-position: right;
+  width: 100vw;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+}
+
+.medicarePromo {
+  width: 100vw;
+  background-image: url("https://unifiedhealthadvisors.com/aws/medicare/mZPLpOM_reduced.jpg");
+  background-position: center;
+}
+
+.medicareBanner div {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  text-align: center;
+  align-items: center;
+}
+.medicareBanner h1 {
+  color: #1f497d;
+  width: 80vw;
+}
+.medicareBanner p {
+  color: #1f497d;
+  font-size: 24px;
+  font-weight: normal;
+}
+
+.medicareBanner .button {
+  margin: 0 4px
+}
+
+.medicareBanner .medicare-banner-buttons {
+  display: flex;
+  flex-direction: row;
+}
+
+.medicareBanner .button {
+  width: auto;
+}
+
+.loader {
+  display: inline-block;
+  width: 65px;
+  height: 65px;
+}
+
+.loader:after {
+  content: " ";
+  display: block;
+  width: 65px;
+  height: 65px;
+  margin: 1px;
+  border-radius: 50%;
+  border: 5px solid #1f497d;
+  border-color: #1f497d transparent #1f497d transparent;
+
+  animation: loader 1.2s linear infinite;
+}
+
+@keyframes loader {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+
+@media (min-width: 769px) {
+  .medicareBanner {
+    background-position: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    margin-bottom: 60px;
+  }
+  .medicareBanner div {
+    width: auto;
+    padding: 20px;
+  }
+  .medicareBanner h1 {
+    font-size: 40px;
+    width: 80%;
+  }
+  .medicareBanner p {
+    width: 80%;
+    font-size: 24px;
+    padding-bottom: 12px;
+  }
+}
+
+@media (max-width: 769px) {
+  .medicarePromo {
+    background-image: url("https://unifiedhealthadvisors.com/aws/medicare/mZPLpOM_reduced_half_heigth.jpg");
+    height: 18vh;
+  }
+}
+
+@media (max-width: 615px) {
+  .medicareBanner {
+    background-image: url("https://unifiedhealthadvisors.com/aws/medicare/aFyanw2_reduced.webp");
+    height: 500px;
+  }
+
+  .medicarePromo {
+    background-image: url("https://unifiedhealthadvisors.com/aws/medicare/mZPLpOM_reduced_half_heigth.webp");
+  }
+
+  .medicareBanner .button {
+    width: 80vw;
+    margin: 4px
+  }
+
+  .medicareBanner .medicare-banner-buttons {
+    flex-direction: column;
+  }
+
+}
