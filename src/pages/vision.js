@@ -18,18 +18,15 @@ export default function Vision() {
         <div>
           <h1>Vision and Hearing</h1>
           <p>Vision and Hearing plans to fit your needs</p>
-          <div>
-            <span
+          <div
             // eslint-disable-next-line react/jsx-no-target-blank   
             onClick={() => fbPxTrigger()}
             onKeyPress={() => fbPxTrigger()}
-            className={`button ${buttonStyles.button} ${styles.button}`}
-            role="button"
-          >
-            Review Vision Plans
-          </span>
+            role="button">
+            <span className={`button ${buttonStyles.button} ${styles.button}`}>
+              Review Vision Plans
+            </span>
           </div>
-
         </div>
       </div>
       <div className="text_container">

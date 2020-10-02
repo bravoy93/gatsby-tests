@@ -70,6 +70,12 @@
   background-image: linear-gradient(to bottom right, #1f497d, #1870b9);
 }
 
+@media (min-width: 670px) and (max-width: 768px) {
+  .nav_wrapper {
+    height: 80px;
+  }
+}
+
 @media (max-width: 768px) {
   .nav_wrapper {
     background-image: linear-gradient(to bottom right, #1f497d, #1870b9);
