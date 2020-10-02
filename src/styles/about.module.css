@@ -1,0 +1,104 @@
+.about_wrapper {
+  margin-bottom: 0px;
+}
+.aboutBanner {
+  height: 400px;
+  background-image: url("https://unifiedhealthadvisors.com/aws/about/d0LlyIi_reduced.jpg");
+}
+.aboutBanner h1 {
+  color: #fff!important;
+  margin-bottom: 0px;
+}
+.aboutBanner p {
+  color: #e3e4e5!important;
+  width: 80%;
+}
+.aboutContainer {
+  width: 80vw;
+  height: auto;
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: space-between;
+  align-items: center;
+}
+.aboutContainer div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.aboutContainer img {
+  display: none;
+}
+.aboutContainer p {
+  margin-bottom: 12px;
+}
+
+.resourceLinks {
+  margin-top: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-start;
+}
+.resourceLinks p {
+  color: #004969;
+  cursor: pointer;
+  padding: 12px 0px;
+}
+.resourceLinks span {
+  padding-right: 24px;
+}
+.resourceLinks p:hover {
+  color: #28aee4;
+}
+.resourceLinks p:active {
+  color: #e03063;
+}
+
+@media (min-width: 769px) {
+  .about_wrapper {
+    margin-bottom: 60px;
+  }
+  .aboutBanner p {
+    width: 60%!important;
+  }
+  .aboutBanner h1 {
+    margin-bottom: 24px;
+  }
+  .aboutContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    height: auto;
+    padding: 0px 40px;
+    overflow: hidden;
+  }
+  .aboutContainer div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: auto;
+  }
+  .aboutContainer h1 {
+    width: initial;
+    text-align: center;
+  }
+  .aboutContainer p {
+    margin-bottom: 0px;
+  }
+  .aboutContainer img {
+    display: flex;
+    width: 24vw;
+    padding: 0px 40px;
+  }
+  .resourceLinks p {
+    padding: 12px;
+  }
+}
+
+@media (max-width: 615px) {
+  .aboutBanner {
+    background-image: url("https://unifiedhealthadvisors.com/aws/about/d0LlyIi_reduced.webp");
+  }
+}

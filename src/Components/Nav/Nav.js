@@ -74,9 +74,9 @@ export default function Nav(props) {
               Enroll
             </a>
           </li>        
-          <NavLink to="/dental/" label="Dental" to_top={props.to_top} />
-          <NavLink to="/vision/" label="Vision/Hearing" to_top={props.to_top} />
-          <NavLink to="/about/" label="About Us" to_top={props.to_top} />
+          <NavLink to="/dental" label="Dental" to_top={props.to_top} />
+          <NavLink to="/vision" label="Vision/Hearing" to_top={props.to_top} />
+          <NavLink to="/about" label="About Us" to_top={props.to_top} />
           <li className={`navNumber ${styles.navNumber}`}>
             <a
               data-replaceable-phone-dialable=""
