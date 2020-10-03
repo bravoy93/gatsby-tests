@@ -6,7 +6,7 @@ import Breakpoint from "../Layout/breakpointConfig";
 
 export default function Products() {  
   const [clicked, setClicked] = useState("");
-  const [breakpoint, setBreakpoint] = useState(new Breakpoint(typeof window === undefined ? '' : window.screen.width));
+  const [breakpoint, setBreakpoint] = useState(new Breakpoint());
   const initialCards = [
     {
       title: "Medicare Advantage and Dual Special Needs Plans (DSNP)",
@@ -42,12 +42,9 @@ export default function Products() {
   const onCardChange = cardIndex => clicked !== cardIndex ? setClicked(cardIndex) : setClicked("")
 
   React.useEffect(() => {
-    window.addEventListener( "resize",()=> {
-      setBreakpoint(new Breakpoint(window.screen.width));      
-    })
-    return () => window.addEventListener( "resize",()=> {
-      setBreakpoint(new Breakpoint(window.screen.width));      
-    })
+    setBreakpoint(new Breakpoint(window.screen.width));
+    window.addEventListener( "resize",()=> setBreakpoint(new Breakpoint(window.screen.width)))
+    return () => window.addEventListener( "resize",()=> setBreakpoint(new Breakpoint(window.screen.width)))
   },[]);
 
   return (
