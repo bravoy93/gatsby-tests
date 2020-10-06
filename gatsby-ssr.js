@@ -30,7 +30,28 @@ const googleFonts = <script
   }}
 />
 
-const HeadComponents = [fbPixel, googleFonts]
+const gtag = <script
+  async
+  key={`uh-gtag`}
+  src={`https://unifiedhealthadvisors.com/gtagm/gtag/js?id=UA-144175240-1`}
+/>
+
+const gtagInlineScript = <script
+  async
+  key={`uh-gtag-inline-script`}
+  dangerouslySetInnerHTML={{
+    __html: `
+    window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "UA-144175240-1");
+  `,
+  }}
+/>
+
+const HeadComponents = [fbPixel, googleFonts, gtag, gtagInlineScript]
 
 exports.onRenderBody = ({setHeadComponents}) => {
   setHeadComponents(HeadComponents)
