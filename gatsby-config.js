@@ -15,28 +15,8 @@ module.exports = {
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
-    /*Google Analitycs with gtag*/
-    {
-      resolve: `gatsby-plugin-gtag`,
-      options: {
-        // your google analytics tracking id
-        trackingId: `UA-144175240-1`,
-        // Puts tracking script in the head instead of the body
-        head: true,
-        // enable ip anonymization
-        anonymize: true,
-      }
-    },
-    /*Hotjar*/
-    {
-      resolve: `gatsby-plugin-hotjar`,
-      options: {
-        includeInDevelopment: false, // optional parameter to include script in development
-        id: 1920090,
-        sv: 6,
-      },
-    },
     /*Manifest*/
+    'gatsby-plugin-offline',
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
@@ -48,7 +28,6 @@ module.exports = {
         display: "standalone",
         icon: "src/images/icon.svg"
       },
-    },
-    'gatsby-plugin-offline',
+    },    
   ],
 }

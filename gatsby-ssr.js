@@ -51,8 +51,32 @@ const gtagInlineScript = <script
   }}
 />
 
-const HeadComponents = [fbPixel, googleFonts, gtag, gtagInlineScript]
+const hotjar = <script
+  async
+  key={`uh-hotjar`}
+  dangerouslySetInnerHTML={{
+    __html: `
+      (function (h, o, t, j, a, r) {
+        h.hj =
+          h.hj ||
+          function () {
+            (h.hj.q = h.hj.q || []).push(arguments);
+          };
+        h._hjSettings = { hjid: 1920090, hjsv: 6 };
+        a = o.getElementsByTagName("head")[0];
+        r = o.createElement("script");
+        r.async = 1;
+        r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv;
+        a.appendChild(r);
+      })(window, document, "https://unifiedhealthadvisors.com/static_hjar/c/hotjar-", ".js?sv=");
+    `,
+  }}
+/>
 
-exports.onRenderBody = ({setHeadComponents}) => {
+const HeadComponents = [fbPixel, googleFonts, gtag, gtagInlineScript]
+const PostBodyComponents = [hotjar]
+
+exports.onRenderBody = ({setHeadComponents, setPostBodyComponents}) => {
   setHeadComponents(HeadComponents)
+  setPostBodyComponents(PostBodyComponents)
 }
