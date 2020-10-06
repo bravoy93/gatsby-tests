@@ -19,17 +19,6 @@ dangerouslySetInnerHTML={{
 }}
 />
 
-const googleFonts = <script
-  async
-  key={`uh-google-fonts`}
-  dangerouslySetInnerHTML={{
-    __html: `
-    <link rel="preload" href="https://unifiedhealthadvisors.com/gapis/css?family=Roboto:300,400,400i,500i,900&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
-      <noscript><link rel="stylesheet" href="https://unifiedhealthadvisors.com/gapis/css?family=Roboto:300,400,400i,500i,900&display=swap"></noscript>
-  `,
-  }}
-/>
-
 const gtag = <script
   async
   key={`uh-gtag`}
@@ -73,7 +62,7 @@ const hotjar = <script
   }}
 />
 
-const HeadComponents = [fbPixel, googleFonts, gtag, gtagInlineScript]
+const HeadComponents = [fbPixel, gtag, gtagInlineScript]
 const PostBodyComponents = [hotjar]
 
 exports.onRenderBody = ({setHeadComponents, setPostBodyComponents}) => {
