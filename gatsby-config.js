@@ -15,15 +15,6 @@ module.exports = {
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
-    /*Fonts*/
-    {
-      resolve: 'gatsby-plugin-web-font-loader',
-      options: {
-        google: {
-          families: ['Roboto:300,400,400i,500i,900']
-        }
-      }
-    },
     /*Google Analitycs with gtag*/
     {
       resolve: `gatsby-plugin-gtag`,
