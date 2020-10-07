@@ -26,8 +26,8 @@
   width: 80vw;
 }
 .medicareBanner p {
-  color: #1f497d;
-  font-size: 24px;
+  /* color: #1f497d; */
+  /* font-size: 24px; */
   font-weight: normal;
 }
 
@@ -87,14 +87,14 @@
     padding: 20px;
   }
   .medicareBanner h1 {
-    font-size: 40px;
+    /* font-size: 40px; */
     width: 80%;
   }
-  .medicareBanner p {
+  /* .medicareBanner p {
     width: 80%;
     font-size: 24px;
     padding-bottom: 12px;
-  }
+  } */
 }
 
 @media (max-width: 769px) {
