@@ -25,11 +25,11 @@ export default function Dental() {
             <br />
             Dentures, Fillings, Simple Extractions
           </p>
-          <div
-            // eslint-disable-next-line react/jsx-no-target-blank   
+          <div 
             onClick={() => fbPxTrigger()}
             onKeyPress={() => fbPxTrigger()}
-            role="button">
+            role="button"
+            tabIndex="0">
             <span className={`button ${buttonStyles.button} ${styles.button}`}>
               UPGRADE NOW
             </span>
@@ -63,7 +63,8 @@ export default function Dental() {
             // eslint-disable-next-line react/jsx-no-target-blank   
             onClick={() => fbPxTrigger()}
             onKeyPress={() => fbPxTrigger()}
-            role="button">
+            role="button"
+            tabIndex="0">
             <span className={`button ${buttonStyles.button} ${styles.button}`}>
               See Dental Plans
             </span>
