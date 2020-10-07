@@ -1,9 +1,9 @@
 {
-  "name": "gatsby-starter-hello-world",
+  "name": "unified-health-advisors",
   "private": true,
-  "description": "A simplified bare-bones starter for Gatsby",
+  "description": "Official website of UHA",
   "version": "0.1.0",
-  "license": "0BSD",
+  "license": "MIT",
   "scripts": {
     "build": "gatsby build",
     "develop": "gatsby develop",
@@ -15,19 +15,19 @@
   },
   "dependencies": {
     "gatsby": "^2.24.63",
+    "gatsby-plugin-facebook-pixel": "^1.0.3",
+    "gatsby-plugin-gtag": "^1.0.13",
+    "gatsby-plugin-hotjar": "^1.1.1",
+    "gatsby-plugin-manifest": "^2.4.33",
+    "gatsby-plugin-offline": "^3.2.30",
     "gatsby-plugin-react-helmet": "^3.3.12",
+    "gatsby-plugin-web-font-loader": "^1.0.4",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
-    "react-helmet": "^6.1.0"
+    "react-helmet": "^6.1.0",
+    "typeface-roboto": "0.0.75"
   },
   "devDependencies": {
     "prettier": "2.1.1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-hello-world"
-  },
-  "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
   }
 }

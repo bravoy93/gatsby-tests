@@ -1,0 +1,72 @@
+.visionBanner {
+  background-image: url("https://unifiedhealthadvisors.com/aws/vision/bbZtkve_reduced.png");
+  background-position: left;
+  width: 100vw;
+  height: 400px;
+  display: flex;
+}
+.visionBanner div {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  text-align: center;
+  align-items: center;
+  margin-right: 0px;
+}
+.visionBanner h1 {
+  color: #1f497d;
+}
+.visionBanner p {
+  color: #626366;
+  font-size: 24px;
+  font-weight: normal;
+}
+
+.visionBanner .button {
+  width: auto;
+}
+
+.visionPromo {
+  background-image: url("https://unifiedhealthadvisors.com/aws/vision/tw7tNQN+_reduced.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100vw;
+  height: 250px;
+  display: flex;
+}
+
+@media (min-width: 769px) {
+  .visionBanner {
+    background-image: url("https://unifiedhealthadvisors.com/aws/vision/rQmEYKT_reduced.png");
+    background-position: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    margin-bottom: 60px;
+  }
+  .visionBanner div {
+    width: auto;
+    padding: 20px;
+  }
+  .visionBanner h1 {
+    font-size: 60px;
+    width: 80%;
+  }
+  .visionBanner p {
+    width: 100%;
+    font-size: 28px;
+    font-weight: 400;
+    padding-bottom: 40px;
+  }
+  .visionPromo {
+    height: 400px;
+  }
+}
+
+@media (max-width: 615px) {
+  .visionPromo {
+    background-image: url("https://unifiedhealthadvisors.com/aws/vision/tw7tNQN+_reduced.webp");
+  }
+}

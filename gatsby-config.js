@@ -14,6 +14,20 @@ module.exports = {
     siteUrl: `https://www.unifiedhealthadvisors.com/`
   },
   plugins: [
-    `gatsby-plugin-react-helmet`
+    `gatsby-plugin-react-helmet`,
+    /*Manifest*/
+    'gatsby-plugin-offline',
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: "Unified Health Advisors",
+        short_name: "UH Advisors",
+        start_url: "/",
+        background_color: "#1f497d",
+        theme_color: "#1f497d",
+        display: "standalone",
+        icon: "src/images/icon.svg"
+      },
+    },    
   ],
 }
