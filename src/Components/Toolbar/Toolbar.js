@@ -32,8 +32,8 @@ const toolbar = (props) => {
       onClick={props.backdropClickHandler}
       onKeyPress={props.backdropClickHandler}
       role="button" 
-      aria-label="close menu"
-      tabIndex="-1">
+      aria-label="Close Menu"
+      tabIndex="0">
         <div>
           <ul>
             <a href="https://unifiedhealthadvisors.com/enroll"
@@ -57,6 +57,8 @@ const toolbar = (props) => {
             data-replaceable-phone-dialable=""
             className={`toolbar_item ${styles.toolbar_item}`}
             href="tel:8559310267"
+            role="button"
+            aria-label="Call to speak speak to a Licensed Benefit Advisor"
           >
             <span className={`button ${button} ${styles.toolbar_button}`} id="toolbar_button">
               Call Now

@@ -21,6 +21,8 @@ export default function Callcta(props) {
             data-replaceable-phone-dialable=""
             className={`toolbar_item ${toolbarStyles.toolbar_item}`}
             href="tel:18559310267"
+            role="button"
+            aria-label="Call to speak speak to a Licensed Benefit Advisor"
           >
             <span className={`number ${styles.number}`}>
               <span>1-855-931-0267</span>

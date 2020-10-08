@@ -51,11 +51,12 @@ export default function Products() {
     <div className={`products_container ${homeStyles.products_container}`} style={{minHeight: '336'}} >
       <div className={`card_container ${styles.card_container}`}>
         {cards.map((card,i) => (
-          // eslint-disable-next-line
           <div className={isSelected(i) ? `card active ${styles.card} ${styles.active}` : `card ${styles.card}`}
               onClick={()=>onCardChange(i)}
               onKeyPress={()=>onCardChange(i)}
-              role="tab"
+              role="button"
+              aria-label={`${card.label}`}
+              tabIndex="0"
               key={i}>
             {breakpoint.xs ? '' : <img src={card.src} alt={card.alt} /> }
             <div className={`container ${styles.container}`}>

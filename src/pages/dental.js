@@ -31,6 +31,7 @@ export default function Dental() {
             onClick={() => fbPxTrigger()}
             onKeyPress={() => fbPxTrigger()}
             role="button"
+            aria-label="Upgrade Now"
             tabIndex="0">
             <span className={`button ${buttonStyles.button} ${styles.button}`}>
               UPGRADE NOW
@@ -66,6 +67,7 @@ export default function Dental() {
             onClick={() => fbPxTrigger()}
             onKeyPress={() => fbPxTrigger()}
             role="button"
+            aria-label="See Dental Plans"
             tabIndex="0">
             <span className={`button ${buttonStyles.button} ${styles.button}`}>
               See Dental Plans

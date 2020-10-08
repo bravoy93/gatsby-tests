@@ -23,6 +23,7 @@ export default function Vision() {
             onClick={() => fbPxTrigger()}
             onKeyPress={() => fbPxTrigger()}
             role="button"
+            aria-label="Review Vision Plans"
             tabIndex="0">
             <span className={`button ${buttonStyles.button} ${styles.button}`}>
               Review Vision Plans
