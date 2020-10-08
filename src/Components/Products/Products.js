@@ -55,6 +55,7 @@ export default function Products() {
               onClick={()=>onCardChange(i)}
               onKeyPress={()=>onCardChange(i)}
               role="button"
+              aria-expanded={isSelected(i)}
               aria-label={`${card.label}`}
               tabIndex="0"
               key={i}>
@@ -73,7 +74,10 @@ export default function Products() {
         ))}
       </div>
       {breakpoint.xs ? '' :
-        <div className={clicked === "" ? `learnMoreClosed ${styles.learnMoreClosed}` : `learnMoreOpened ${styles.learnMoreOpened}`}>
+        <div        
+        aria-label="Selected Product Description"
+        aria-expanded={clicked !== ""}
+        className={clicked === "" ? `learnMoreClosed ${styles.learnMoreClosed}` : `learnMoreOpened ${styles.learnMoreOpened}`}>
           <h1 className={`learnMoreTitle ${styles.learnMoreTitle}`}>
             {clicked === ""? null : cards[clicked].title }
           </h1>
