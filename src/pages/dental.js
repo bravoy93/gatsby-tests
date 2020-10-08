@@ -11,7 +11,9 @@ import Callcta from "../Components/CallCTA/Callcta"
 export default function Dental() {
   return (
     <Layout>
-      <SEO title="Dental" description="Exams and Cleanings, Oral Surgery, Crowns, Dentures, Fillings, Simple Extractions"/>
+      <SEO title="Dental" 
+        description="Exams and Cleanings, Oral Surgery, Crowns, Dentures, Fillings, Simple Extractions" 
+        keywords={[`dental`, `dentures`,`health`, `healtcare`, `unified health`]}/>
      
       <div className={`home_wrapper ${homeStyles.home_wrapper}`}>
       <div className={`banner ${homeStyles.banner} dentalBanner ${styles.dentalBanner}`}>

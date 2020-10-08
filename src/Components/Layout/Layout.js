@@ -23,7 +23,7 @@ export default function Layout({children}) {
     handleScrollToElement(/*"nav"*/);
   };
 
-  function handleScrollToElement(/*elRef*/) {
+  const handleScrollToElement = (/*elRef*/) => {
     // const tesNode = ReactDOM.findDOMNode(this.refs[elRef]);
     window.scrollTo({ top: 0, behavior: "smooth" });
   }

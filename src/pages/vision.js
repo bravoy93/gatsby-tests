@@ -11,7 +11,8 @@ import Callcta from "../Components/CallCTA/Callcta"
 export default function Vision() {
   return (
     <Layout>
-      <SEO title="Vision/Hearing" description="Vision and Hearing plans to fit your needs"/>
+      <SEO title="Vision/Hearing" description="Vision and Hearing plans to fit your needs" 
+        keywords={['vision', 'hearing','healthcare', 'unified health', 'medical']}/>
      
       <div className={`home_wrapper ${homeStyles.home_wrapper}`}>
       <div className={`banner ${homeStyles.banner} visionBanner ${styles.visionBanner}`}>
