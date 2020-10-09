@@ -61,7 +61,7 @@ export default function Products() {
               key={i}>
             {breakpoint.xs ? '' : <img src={card.src} alt={card.alt} /> }
             <div className={`container ${styles.container}`}>
-              <h1>{card.label}</h1>
+              <h2>{card.label}</h2>
               <div className={isSelected(i) ? 
                 `card-content-text-active ${styles.cardContentTextActive} xs-only`
                 : `card-content-text ${styles.cardContentText} xs-only`}>
@@ -78,9 +78,9 @@ export default function Products() {
         aria-label="Selected Product Description"
         aria-expanded={clicked !== ""}
         className={clicked === "" ? `learnMoreClosed ${styles.learnMoreClosed}` : `learnMoreOpened ${styles.learnMoreOpened}`}>
-          <h1 className={`learnMoreTitle ${styles.learnMoreTitle}`}>
+          <h2 className={`learnMoreTitle ${styles.learnMoreTitle}`}>
             {clicked === ""? null : cards[clicked].title }
-          </h1>
+          </h2>
           <p>{clicked === ""? null : cards[clicked].description }</p>
         </div>
       }

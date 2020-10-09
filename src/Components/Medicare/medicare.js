@@ -43,9 +43,9 @@ export default function Medicare() {
         </div>
 
         <div className="text_container xs-none sm-none">
-          <h1 className="title">
+          <h2 className="title">
             Medicare Advantage and Dual Special Needs Plans <span>(DSNP)</span>
-          </h1>
+          </h2>
           <p className="large_body">
             These plans offer an alternative way to get your Original Medicare,
             Part A and Part B, benefits. Unlike Original Medicare, Medicare
@@ -54,18 +54,18 @@ export default function Medicare() {
             coverage, over-the-counter health products, transportation and a
             fitness benefit.
           </p>
-          <h1 className="title">
+          <h2 className="title">
             Medicare Prescription Drug Coverage <span>(Part D)</span>
-          </h1>
+          </h2>
           <p className="large_body">
             You can enroll in a stand-alone Medicare Prescription Drug Plan that
             can complement your existing Original Medicare (Part A and Part B)
             coverage. These plans cover a formulary of brand and generic
             medications.
           </p>
-          <h1 className="title">
+          <h2 className="title">
             Medicare Supplement Plans <span>(Medigap)</span>
-          </h1>
+          </h2>
           <p className="large_body">
             These policies are sold by private insurance companies to help pay
             some of the healthcare costs that Original Medicare (Parts A and B)
@@ -73,7 +73,7 @@ export default function Medicare() {
             with deductibles, premiums, and copayment/ coinsurance, as well as
             emergency foreign travel coverage.
           </p>
-          <h1 className="title">Need Medicare Coverage?</h1>
+          <h2 className="title">Need Medicare Coverage?</h2>
           <p className="large_body">
             Unified Health works with consumers to find affordable Medicare
             coverage that meets their healthcare needs. Unified Health’s
