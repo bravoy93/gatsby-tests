@@ -50,7 +50,7 @@ export default function Nav(props) {
         aria-label="Home"
         onClick={(e) => {onLogoClick(e)}}
         onKeyPress={(e) => {onLogoClick(e)}}>
-        <Link to="/">
+        <Link to="/" title='Home'>
           <img
             src={icon}
             alt="Unified Health Icon"

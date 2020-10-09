@@ -8,9 +8,9 @@ module.exports = {
   /* Your site config here */
   siteMetadata: {
     title: `Unified Health Advisors`,
-    description: `Healthcare, not just insurance. Find the Right Healthcare Solutions`,
+    description: `Healthcare, not just insurance. Find the Right Healthcare Solutions and get the benefits that you deserve. Find out what you've been investing in all this time.`,
     author: `Unified Health`,
-    keywords: [`healthcare`, `dental`, `vision`, `hearing`, `unified health`],
+    keywords: [`health`, `health insurance plans`, `health insurance`, `medicare`, `unified health`],
     siteUrl: `https://unifiedhealthadvisors.com/`
   },
   plugins: [
