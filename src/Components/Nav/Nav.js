@@ -46,7 +46,8 @@ export default function Nav(props) {
     <div className={nav_wrapper_class}>
       <div 
         role="button"
-        tabIndex="-1"
+        tabIndex="0"
+        aria-label="Home"
         onClick={(e) => {onLogoClick(e)}}
         onKeyPress={(e) => {onLogoClick(e)}}>
         <Link to="/">
@@ -82,6 +83,8 @@ export default function Nav(props) {
               data-replaceable-phone-dialable=""
               className={nav_number_scrolled}
               href="tel:18559310267"
+              role="button"
+              aria-label="Call to speak speak to a Licensed Benefit Advisor"
             >
               1-855-931-0267 <span>TTY users 711</span>
             </a>

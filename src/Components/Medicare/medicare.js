@@ -23,6 +23,7 @@ export default function Medicare() {
                 onKeyPress={() => fbPxTrigger()}
                 className={`button ${buttonStyles.button} ${selfStyles.button}`}
                 role="button"
+                aria-label="Compare Plans"
                 tabIndex="0"
               >
                 COMPARE PLANS
@@ -32,6 +33,7 @@ export default function Medicare() {
                 onKeyPress={() => fbPxTrigger()}
                 className={`button ${buttonStyles.button} ${selfStyles.button}`}
                 role="button"
+                aria-label="Enroll Now"
                 tabIndex="0"
               >
                 ENROLL NOW

@@ -11,7 +11,9 @@ import Callcta from "../Components/CallCTA/Callcta"
 export default function Dental() {
   return (
     <Layout>
-      <SEO title="Dental" description="Exams and Cleanings, Oral Surgery, Crowns, Dentures, Fillings, Simple Extractions"/>
+      <SEO title="Dental" 
+        description="Exams and Cleanings, Oral Surgery, Crowns, Dentures, Fillings, Simple Extractions" 
+        keywords={[`dental`, `dentures`,`health`, `healtcare`, `unified health`]}/>
      
       <div className={`home_wrapper ${homeStyles.home_wrapper}`}>
       <div className={`banner ${homeStyles.banner} dentalBanner ${styles.dentalBanner}`}>
@@ -29,6 +31,7 @@ export default function Dental() {
             onClick={() => fbPxTrigger()}
             onKeyPress={() => fbPxTrigger()}
             role="button"
+            aria-label="Upgrade Now"
             tabIndex="0">
             <span className={`button ${buttonStyles.button} ${styles.button}`}>
               UPGRADE NOW
@@ -64,6 +67,7 @@ export default function Dental() {
             onClick={() => fbPxTrigger()}
             onKeyPress={() => fbPxTrigger()}
             role="button"
+            aria-label="See Dental Plans"
             tabIndex="0">
             <span className={`button ${buttonStyles.button} ${styles.button}`}>
               See Dental Plans

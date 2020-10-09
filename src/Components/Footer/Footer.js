@@ -16,6 +16,7 @@ const FooterSocialMediaIcon = props => (
     target="_blank"
     rel="noopener noreferrer"
     href={props.href}
+    aria-label={props.ariaLabel}
     className={`social_media_icon ${styles.social_media_icon} ${props.iconClassName} ${styles[props.iconClassName]}`}
 >{' '}</a>
 )
@@ -74,6 +75,8 @@ export default function Footer(props) {
           data-replaceable-phone-dialable=""
           className={`footer_number ${styles.footer_number}`}
           href="tel:18559310267"
+          role="button"
+          aria-label="Call to speak speak to a Licensed Benefit Advisor"
         >
           <span>1-855-931-0267</span>
         </a>
@@ -82,7 +85,9 @@ export default function Footer(props) {
         <div>
           <Link to="/" style={{ textDecoration: "none" }} 
             onClick={(e) => {onLogoClick(e)}}
-            onKeyPress={(e) => {onLogoClick(e)}}>
+            onKeyPress={(e) => {onLogoClick(e)}} 
+            role="button"
+            aria-label="Home">
             <img
               className={`footer_logo ${styles.footer_logo}`}
               src={logo}
@@ -90,13 +95,14 @@ export default function Footer(props) {
           </Link>
         </div>
         <div className={`footer_social_wrapper_child ${styles.footer_social_wrapper_child}`}>
-          <FooterSocialMediaIcon href="https://www.facebook.com/UnifiedHealth" iconClassName="footer_fb" />
-          <FooterSocialMediaIcon href="https://www.instagram.com/UnifiedHealth" iconClassName="footer_ig" />
-          <FooterSocialMediaIcon href="https://www.linkedin.com/company/UnifiedHealth" iconClassName="footer_lk" />
+          <FooterSocialMediaIcon href="https://www.facebook.com/UnifiedHealth" iconClassName="footer_fb" ariaLabel="Unified Health in Facebook"/>
+          <FooterSocialMediaIcon href="https://www.instagram.com/UnifiedHealth" iconClassName="footer_ig" ariaLabel="Unified Health in Instagram"/>
+          <FooterSocialMediaIcon href="https://www.linkedin.com/company/UnifiedHealth" iconClassName="footer_lk" ariaLabel="Unified Health in Linkedin"/>
           <a
             href="mailto:info@unifiedhealth.com"
             style={{ textDecoration: "none", color: "#fff" }}
             className={`social_media_icon ${styles.social_media_icon} footer_mail ${styles.footer_mail}`}
+            aria-label="Send us a e-mail to info@unifiedhealth.com"
           >{" "}</a>
         </div>
       </div>

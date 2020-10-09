@@ -33,7 +33,7 @@ function SEO({ description, lang, meta, image: metaImage, title, pathname }) {
         lang,
       }}
       title={title}
-      titleTemplate={`${site.siteMetadata.title} | %s`}
+      titleTemplate={`%s | ${site.siteMetadata.title}`}
       link={
         canonical
           ? [
