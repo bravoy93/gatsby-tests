@@ -8,7 +8,7 @@ module.exports = {
   /* Your site config here */
   siteMetadata: {
     title: `Unified Health Advisors`,
-    description: `Healthcare, not just insurance. Find the Right Healthcare Solutions and get the benefits that you deserve. Find out what you've been investing in all this time.`,
+    description: `Unified Health's licensed agents can match you with a variety of Medicare coverage options and get you the benefits that you deserve. Take advantage, enroll.`,
     author: `Unified Health`,
     keywords: [`health`, `health insurance plans`, `health insurance`, `medicare`, `unified health`],
     siteUrl: `https://unifiedhealthadvisors.com/`
