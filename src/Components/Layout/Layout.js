@@ -5,18 +5,25 @@ import Backdrop from "../Backdrop/Backdrop"
 import Toolbar from "../Toolbar/Toolbar"
 import Footer from "../Footer/Footer"
 import "typeface-roboto"
+import Breakpoint from "../Layout/breakpointConfig";
 
 export default function Layout({children}) {
   const [toolbarOpen, setToolbarOpen] = useState(false);
-  const [scrolled, setScrolled] = useState(false);  
+  const [scrolled, setScrolled] = useState(false);
+  const [breakpoint, setBreakpoint] = useState(new Breakpoint());
 
   const scrollListener = () => {
     setScrolled(window.scrollY > 80)
   };
 
   React.useEffect(() => {
-    window.addEventListener("scroll", scrollListener)
-    return () => window.removeEventListener("scroll", scrollListener)
+    setBreakpoint(new Breakpoint(window.screen.width));
+    window.addEventListener("scroll", scrollListener);
+    window.addEventListener( "resize",()=> setBreakpoint(new Breakpoint(window.screen.width)))
+    return () => {
+      window.removeEventListener("scroll", scrollListener);
+      window.addEventListener( "resize",()=> setBreakpoint(new Breakpoint(window.screen.width)))
+    }
   },[]);
 
   const toTop = () => {
@@ -30,7 +37,6 @@ export default function Layout({children}) {
   
   const toolbarToggleClickHandler = () => {
     setToolbarOpen(!toolbarOpen)
-    console.log('toolbarToggleClickHandler clickeado')
   };
   
   const backdropClickHandler = () => {
@@ -38,23 +44,27 @@ export default function Layout({children}) {
   };
 
   let backdrop;
-  if (toolbarOpen) {
-    backdrop = <Backdrop backdropClickHandler={backdropClickHandler} />;
-  }
+  let toolbar;
+
+  //toolbar and backdrop only renders if the breakpoint SM or XS is  to prevent unnecessary DOM nodes
+  if (breakpoint.isSmAndDown) {
+    toolbar = <Toolbar show={toolbarOpen} backdropClickHandler={backdropClickHandler} to_top={toTop}/>
+      
+    if (toolbarOpen) {
+      backdrop = <Backdrop backdropClickHandler={backdropClickHandler} />;
+    }    
+  }  
 
   return (
     <>      
       <Nav 
         toolbarToggleClickHandler={toolbarToggleClickHandler}
+        isSmAndDown={breakpoint.isSmAndDown}
         scrolled={scrolled}
         to_top={toTop}/>
-      <div id="nav"/>
       {children}
       {backdrop}
-      <Toolbar
-        show={toolbarOpen}
-        backdropClickHandler={backdropClickHandler}
-        to_top={toTop}/>
+      {toolbar}
       <Footer to_top={toTop}/>
     </>
   )

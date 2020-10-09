@@ -30,11 +30,7 @@ export default function Nav(props) {
   }
   if (!props.scrolled) {
     logo = logo_dark;
-  } 
-
-  // React.useEffect(() => {
-  //   value = stateValue;
-  // },[value]); // Only re-run the effect if 'value' changes, like a Vue watcher
+  }   
 
   const onLogoClick = (e='') => {
     const path = typeof window !== 'undefined' ? window.location.pathname : '';
@@ -42,33 +38,32 @@ export default function Nav(props) {
     props.to_top()
   }
 
-  return (
-    <div className={nav_wrapper_class}>
-      <div 
-        role="button"
-        tabIndex="0"
-        aria-label="Home"
-        onClick={(e) => {onLogoClick(e)}}
-        onKeyPress={(e) => {onLogoClick(e)}}>
-        <Link to="/" title='Home'>
-          <img
-            src={icon}
-            alt="Unified Health Icon"
-            className={`cfd_icon_mobile ${styles.cfd_icon_mobile}`}
-          />
-          <img
-            src={logo}
-            alt="Unified Health Logo"
-            className={`cfd_logo ${styles.cfd_logo}`}
-            width="140px"
-            height="40px"
-          />
-        </Link>
-      </div>
-      <div className={`hamburger ${styles.hamburger}`}>
+  const movilLogo = (
+    <img
+      src={icon}
+      alt="Unified Health Icon"
+      className={`cfd_icon_mobile ${styles.cfd_icon_mobile}`}
+    />
+  );
+
+  const desktopLogo = (
+    <img
+      src={logo}
+      alt="Unified Health Logo"
+      className={`cfd_logo ${styles.cfd_logo}`}
+      width="140px"
+      height="40px"
+    />
+  );
+
+  const movilNavTemplate = (
+    <div className={`hamburger ${styles.hamburger}`}>
         <Hamburger click={props.toolbarToggleClickHandler} />
-      </div>
-      <div className={items_nav}>
+    </div>
+  );
+
+  const desktopNavTemplate = (
+    <div className={items_nav}>
         <ul>
           <li>
             <a href="https://unifiedhealthadvisors.com/enroll" target="_blank" rel="noreferrer" onClick={()=>fbPxTrigger({goEmbed: false})} style={{ textDecoration: "none" }}>
@@ -94,6 +89,29 @@ export default function Nav(props) {
           </li>
         </ul>
       </div>
+  );
+
+  function Logo(props) {
+    return props.isSmAndDown ? movilLogo : desktopLogo
+  }
+
+  function NavBody(props) {
+    return props.isSmAndDown ? movilNavTemplate : desktopNavTemplate
+  }
+
+  return (
+    <div className={nav_wrapper_class}>
+      <div>
+        <Link 
+          to="/"  
+          role="button"
+          aria-label="Home"
+          onClick={(e) => {onLogoClick(e)}}
+          onKeyPress={(e) => {onLogoClick(e)}}>
+          <Logo isSmAndDown={props.isSmAndDown}/>
+        </Link>
+      </div>
+      <NavBody isSmAndDown={props.isSmAndDown}/>
     </div>
   );
 }

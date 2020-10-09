@@ -103,9 +103,9 @@ export default function Footer(props) {
           </Link>
         </div>
         <div className={`footer_social_wrapper_child ${styles.footer_social_wrapper_child}`}>
-          <FooterSocialMediaIcon href="https://www.facebook.com/UnifiedHealth" iconClassName="footer_fb" ariaLabel="Unified Health in Facebook"/>
-          <FooterSocialMediaIcon href="https://www.instagram.com/UnifiedHealth" iconClassName="footer_ig" ariaLabel="Unified Health in Instagram"/>
-          <FooterSocialMediaIcon href="https://www.linkedin.com/company/UnifiedHealth" iconClassName="footer_lk" ariaLabel="Unified Health in Linkedin"/>
+          <FooterSocialMediaIcon href="https://www.facebook.com/UnifiedHealthIns/" iconClassName="footer_fb" ariaLabel="Unified Health in Facebook"/>
+          <FooterSocialMediaIcon href="https://www.instagram.com/unifiedhealthins/" iconClassName="footer_ig" ariaLabel="Unified Health in Instagram"/>
+          <FooterSocialMediaIcon href="https://www.linkedin.com/company/unifiedhealthins/" iconClassName="footer_lk" ariaLabel="Unified Health in Linkedin"/>
           <a
             href="mailto:info@unifiedhealth.com"
             style={{ textDecoration: "none", color: "#fff" }}
