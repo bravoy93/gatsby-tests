@@ -35,9 +35,9 @@
 .container {
   text-align: center;
 }
-.container h1 {
+.container h2 {
   padding: 6px;
-  font-weight: 700;
+  font-weight: 900;
   letter-spacing: 1px;
 }
 .container p {
@@ -70,7 +70,7 @@
   transition: 0.5s all ease;
   overflow: scroll;
 }
-.learnMoreOpened h1 {
+.learnMoreOpened h2 {
   font-size: 36px;
   font-weight: 900;
   color: #1f497d;
@@ -94,7 +94,7 @@
 .active {
   background-color: #1f497d;
 }
-.active h1 {
+.active h2 {
   color: #fff;
 }
 .active p {
@@ -120,7 +120,7 @@
     /* width: 200px; */
     height: 200px;
   }
-  .container h1 {
+  .container h2 {
     padding: 12px;
   }
   .container p {
