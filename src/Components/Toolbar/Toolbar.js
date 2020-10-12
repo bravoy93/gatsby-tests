@@ -27,7 +27,7 @@ const toolbar = (props) => {
   }
   
   return (
-    <nav className={toolbarClasses}>
+    <nav className={`${toolbarClasses} lg-none`}>
       <div className={`toolbar_container ${styles.toolbar_container}`} 
       onClick={props.backdropClickHandler}
       onKeyPress={props.backdropClickHandler}
