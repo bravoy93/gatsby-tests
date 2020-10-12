@@ -50,6 +50,11 @@ padding-top: 36px;
 color: #1f497d;
 }
 
+.title a {
+  color: #1f497d;
+  text-decoration: none;
+}
+
 .subtitle {
 font-size: 20px;
 line-height: 32px;

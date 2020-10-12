@@ -44,13 +44,8 @@ export default function Nav(props) {
 
   return (
     <div className={nav_wrapper_class}>
-      <div 
-        role="button"
-        tabIndex="0"
-        aria-label="Home"
-        onClick={(e) => {onLogoClick(e)}}
-        onKeyPress={(e) => {onLogoClick(e)}}>
-        <Link to="/" title='Home'>
+      <div>
+        <Link to="/" title='Home' onClick={(e) => {onLogoClick(e)}} onKeyPress={(e) => {onLogoClick(e)}}>
           <img
             src={icon}
             alt="Unified Health Icon"
