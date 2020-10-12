@@ -174,14 +174,15 @@ border: 1px solid #df3063;
   font-weight: bold;
   font-size: 24px;
 }
-.xs-only {
+.xs-only,
+.lg-none {
   display: none;
 }
 }
 
 /*sm view*/
 @media (min-width: 615px) and (max-width: 768px) {
-.sm-none {display: none}
+.sm-none,
 .xs-only {display: none}
 }
 
