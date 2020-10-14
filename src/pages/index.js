@@ -4,7 +4,7 @@ import SEO from "../Components/seo"
 import Medicare from "../Components/Medicare/medicare"
 
 const homeImage = {
-  src: "https://unifiedhealthadvisors.com/aws/images/blue+full+.svg",
+  src: "https://cfd-web.s3.us-east-2.amazonaws.com/images/blue%2Bbox%2Bfull.svg",
   width: '500px',
   height: '500px'
 }
