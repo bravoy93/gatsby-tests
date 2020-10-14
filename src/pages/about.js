@@ -7,7 +7,8 @@ import homeStyles from "../styles/home.module.css"
 export default function About() {
   return (
     <Layout>
-      <SEO title="About Us" description="We work hard to find the right Medicare and healthcare solutions, so you don’t have to."/>
+      <SEO title="About Us" description="We work hard to find the right Medicare and healthcare solutions, so you don’t have to." 
+      pathname="/about"/>
      
       <div className={`home_wrapper ${homeStyles.home_wrapper} about_wrapper ${styles.about_wrapper}`}>
         <div className={`banner ${homeStyles.banner} aboutBanner ${styles.aboutBanner}`}>
