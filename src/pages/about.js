@@ -5,7 +5,7 @@ import styles from "../styles/about.module.css"
 import homeStyles from "../styles/home.module.css"
 
 const homeImage = {
-  src: "https://unifiedhealthadvisors.com/aws/images/blue+full+.svg",
+  src: "https://cfd-web.s3.us-east-2.amazonaws.com/images/blue%2Bbox%2Bfull.svg",
   width: '500px',
   height: '500px'
 }
