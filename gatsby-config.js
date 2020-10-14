@@ -92,12 +92,27 @@ module.exports = {
         policy: [{ 
           userAgent: '*', 
           allow: '/',
-          disallow: '/static',
-          disallow: '/workbox-v4.3.1',
-          disallow: '/*.css$',
-          disallow: '/*.js$',
-          disallow: '/*.json$',
-          disallow: '/*.map$',
+          disallow: '/static'
+        },
+        { 
+          userAgent: '*',
+          disallow: '/workbox-v4.3.1'
+        },
+        { 
+          userAgent: '*', 
+          disallow: '/*.css$'
+        },
+        { 
+          userAgent: '*',
+          disallow: '/*.js$'
+        },
+        { 
+          userAgent: '*', 
+          disallow: '/*.json$'
+        },
+        { 
+          userAgent: '*', 
+          disallow: '/*.map$'
         }]
       }
     },
