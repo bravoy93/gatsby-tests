@@ -4,11 +4,17 @@ import SEO from "../Components/seo"
 import styles from "../styles/about.module.css"
 import homeStyles from "../styles/home.module.css"
 
+const homeImage = {
+  src: "https://unifiedhealthadvisors.com/aws/images/blue+full+.svg",
+  width: '500px',
+  height: '500px'
+}
+
 export default function About() {
   return (
     <Layout>
       <SEO title="About Us" description="We work hard to find the right Medicare and healthcare solutions, so you don’t have to." 
-      pathname="/about"/>
+      pathname="/about" image={homeImage}/>
      
       <div className={`home_wrapper ${homeStyles.home_wrapper} about_wrapper ${styles.about_wrapper}`}>
         <div className={`banner ${homeStyles.banner} aboutBanner ${styles.aboutBanner}`}>
