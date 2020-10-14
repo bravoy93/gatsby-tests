@@ -59,6 +59,8 @@ export default function Medicare() {
           </div>
         </div>
 
+        <p style={{display: "none"}}>Medical Plans to get the benefits that your health deserves</p>
+
         <div className="text_container xs-none sm-none">
           <Plan title="Medicare Advantage and Dual Special Needs Plans" subtitle="DSNP">
             These plans offer an alternative way to get your Original Medicare,

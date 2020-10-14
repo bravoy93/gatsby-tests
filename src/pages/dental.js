@@ -7,6 +7,11 @@ import buttonStyles from "../Components/Button/button.module.css"
 import { fbPxTrigger } from "../index";
 import Callcta from "../Components/CallCTA/Callcta"
 
+const homeImage = {
+  src: "https://unifiedhealthadvisors.com/aws/images/blue+full+.svg",
+  width: '500px',
+  height: '500px'
+}
 
 export default function Dental() {
   return (
@@ -14,7 +19,8 @@ export default function Dental() {
       <SEO title="Dental" 
         description="Exams and Cleanings, Oral Surgery, Crowns, Dentures, Fillings, Simple Extractions" 
         keywords={[`dental`, `dentures`,`health`, `healtcare`, `unified health`]} 
-        pathname="/dental"/>
+        pathname="/dental"
+        image={homeImage}/>
      
       <div className={`home_wrapper ${homeStyles.home_wrapper}`}>
       <div className={`banner ${homeStyles.banner} dentalBanner ${styles.dentalBanner}`}>

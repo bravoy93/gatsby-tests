@@ -7,13 +7,18 @@ import buttonStyles from "../Components/Button/button.module.css"
 import { fbPxTrigger } from "../index";
 import Callcta from "../Components/CallCTA/Callcta"
 
+const homeImage = {
+  src: "https://unifiedhealthadvisors.com/aws/images/blue+full+.svg",
+  width: '500px',
+  height: '500px'
+}
 
 export default function Vision() {
   return (
     <Layout>
       <SEO title="Vision/Hearing" description="Vision and Hearing plans to fit your needs" 
-        keywords={['vision', 'hearing','healthcare', 'unified health', 'medical']}
-        pathname="/vision"/>
+        keywords={['vision', 'hearing','healthcare', 'unified health', 'medicare']}
+        pathname="/vision" image={homeImage}/>
      
       <div className={`home_wrapper ${homeStyles.home_wrapper}`}>
       <div className={`banner ${homeStyles.banner} visionBanner ${styles.visionBanner}`}>
