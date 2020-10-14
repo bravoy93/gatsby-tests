@@ -84,5 +84,22 @@ module.exports = {
     },
     'gatsby-plugin-offline',
     `gatsby-plugin-sitemap`,
+    {
+      resolve: 'gatsby-plugin-robots-txt',
+      options: {
+        host: 'https://sharp-haibt-80819a.netlify.app/',
+        sitemap: 'https://sharp-haibt-80819a.netlify.app/sitemap.xml',
+        policy: [{ 
+          userAgent: '*', 
+          allow: '/',
+          disallow: '/static',
+          disallow: '/workbox-v4.3.1',
+          disallow: '/*.css$',
+          disallow: '/*.js$',
+          disallow: '/*.json$',
+          disallow: '/*.map$',
+        }]
+      }
+    },
   ],
 }
