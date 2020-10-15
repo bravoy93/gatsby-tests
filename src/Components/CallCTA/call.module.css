@@ -6,6 +6,7 @@
   box-shadow: 0 0 5px 0 #ccc;
   width: 100vw;
   background-image: radial-gradient(#fff, #f1f2f2d8);
+  min-height: 360px;
 }
 .call_container {
   display: flex;
@@ -95,7 +96,7 @@
     flex-direction: row;
     align-items: center;
     margin-bottom: 64px;
-    padding: 40px;
+    padding: 40px;    
   }
   .call_container {
     margin-bottom: 0px;

@@ -5,7 +5,7 @@ import { fbPxTrigger } from "../../index";
 
 const FooterLink = props => (
   <li>
-    <Link to={props.to} style={{ textDecoration: "none" }} onClick={() => props.to_top()} title={props.title}>
+    <Link to={props.to} onClick={() => props.to_top()} title={props.title}>
       {props.label}
     </Link>
   </li>
@@ -40,8 +40,7 @@ export default function Footer(props) {
             <a href="https://unifiedhealthadvisors.com/enroll" 
               target="_blank" 
               rel="noreferrer"
-              onClick={()=>fbPxTrigger({goEmbed: false})} 
-              style={{ textDecoration: "none" }} 
+              onClick={()=>fbPxTrigger({goEmbed: false})}              
               title="Take advantage and enroll">
               Enroll
             </a>
@@ -66,7 +65,7 @@ export default function Footer(props) {
             <FooterLink to="/termsPrivacy/" label="Privacy Policy" to_top={props.to_top} title="Read our Privacy Policy"/>
             <span>|</span>
             <li>
-              <a href="mailto:info@UnifiedHealth.com" style={{ textDecoration: "none"}} title="Send us an e-mail to info@unifiedhealth.com">
+              <a href="mailto:info@UnifiedHealth.com" title="Send us an e-mail to info@unifiedhealth.com">
                 Contact Us
               </a>
             </li>
@@ -90,7 +89,7 @@ export default function Footer(props) {
       </div>
       <div className={`social_media_wrapper ${styles.social_media_wrapper}`}>
         <div>
-          <Link to="/" style={{ textDecoration: "none" }} 
+          <Link to="/"
             onClick={(e) => {onLogoClick(e)}}
             onKeyPress={(e) => {onLogoClick(e)}} 
             role="button"
@@ -108,7 +107,6 @@ export default function Footer(props) {
           <FooterSocialMediaIcon href="https://www.linkedin.com/company/unifiedhealthins/" iconClassName="footer_lk" ariaLabel="Unified Health in Linkedin"/>
           <a
             href="mailto:info@unifiedhealth.com"
-            style={{ textDecoration: "none", color: "#fff" }}
             className={`social_media_icon ${styles.social_media_icon} footer_mail ${styles.footer_mail}`}
             aria-label="Send us an e-mail to info@unifiedhealth.com"
             title="Send us an e-mail to info@unifiedhealth.com"

@@ -48,7 +48,7 @@ export default function Products() {
   },[]);
 
   return (
-    <div className={`products_container ${homeStyles.products_container}`} style={{minHeight: '336'}} >
+    <div className={`products_container ${homeStyles.products_container}`}>
       <div className={`card_container ${styles.card_container}`}>
         {cards.map((card,i) => (
           <div className={isSelected(i) ? `card active ${styles.card} ${styles.active}` : `card ${styles.card}`}

@@ -28,7 +28,7 @@ export default function About() {
         <div>
           <div className={`aboutContainer ${styles.aboutContainer}`}>
             <div>
-              <h1 className={`full_title ${homeStyles.full_title}`} style={{whiteSpace: "nowrap"}}>UNIFIED HEALTH</h1>
+              <h1 className={`full_title ${homeStyles.full_title}`}>UNIFIED HEALTH</h1>
               <p className={`quote ${styles.quote}`}>"Healthcare, not just health insurance."</p>
               <p className="large_body justify-xs-text">
                 Unified Health has a team of courteous and knowledgeable licensed
@@ -78,7 +78,6 @@ export default function About() {
                     target="_blank"
                     rel="noopener noreferrer"
                     href="https://www.medicare.gov/sites/default/files/2018-09/10050-medicare-and-you.pdf"
-                    style={{ textDecoration: "none" }}
                   >
                     <p>
                       <span>•</span> 2019 Medicare and You Handbook
@@ -88,7 +87,6 @@ export default function About() {
                     target="_blank"
                     rel="noopener noreferrer"
                     href="https://www.kff.org/medicare/issue-brief/an-overview-of-medicare/"
-                    style={{ textDecoration: "none" }}
                   >
                     <p>
                       <span>•</span>An Overview of Medicare
@@ -98,7 +96,6 @@ export default function About() {
                     target="_blank"
                     rel="noopener noreferrer"
                     href="https://www.kff.org/tag/medicare-advantage/"
-                    style={{ textDecoration: "none" }}
                   >
                     <p>
                       <span>•</span>Medicare Advantage Overview

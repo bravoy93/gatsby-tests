@@ -6,8 +6,7 @@ import Hamburger from "../Toolbar/ToolbarToggleButton.js";
 
 const NavLink = props => (
   <li>
-    <Link to={props.to} 
-      style={{ textDecoration: "none" }}
+    <Link to={props.to}
       onClick={() => props.to_top()}
       onKeyPress={() => props.to_top()}>
       {props.label}
@@ -66,7 +65,7 @@ export default function Nav(props) {
       <div className={items_nav}>
         <ul>
           <li>
-            <a href="https://unifiedhealthadvisors.com/enroll" target="_blank" rel="noreferrer" onClick={()=>fbPxTrigger({goEmbed: false})} style={{ textDecoration: "none" }}>
+            <a href="https://unifiedhealthadvisors.com/enroll" target="_blank" rel="noreferrer" onClick={()=>fbPxTrigger({goEmbed: false})}>
               Enroll
             </a>
           </li>        

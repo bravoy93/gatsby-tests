@@ -8,7 +8,7 @@ import { fbPxTrigger } from "../../index";
 
 
 const ToolbarItem = props => (  
-  <Link to={props.to} style={{ textDecoration: "none" }} onClick={() => props.to_top()} onKeyPress={() => props.to_top()}>
+  <Link to={props.to} onClick={() => props.to_top()} onKeyPress={() => props.to_top()}>
     <li className={`toolbar_item ${styles.toolbar_item}`}>
       {props.label}
     </li>
@@ -39,7 +39,6 @@ const toolbar = (props) => {
             <a href="https://unifiedhealthadvisors.com/enroll"
             target="_blank"
             rel="noreferrer"
-            style={{ textDecoration: "none" }}
             onClick={handleEnrollClick}
             onKeyPress={handleEnrollClick}
             >
