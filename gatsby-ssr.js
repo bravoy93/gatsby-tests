@@ -62,7 +62,54 @@ const hotjar = <script
   }}
 />
 
-const HeadComponents = [fbPixel, gtag, gtagInlineScript]
+const microdata = <script
+  async
+  key={`uh-microdata`}
+  type={`application/ld+json`}
+  dangerouslySetInnerHTML={{
+    __html: `
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "url": "https://unifiedhealth.com",
+      "logo": "https://unifiedhealth.com/aws/images/blue+full+.svg",
+      "image": ["https://cfd-web.s3.us-east-2.amazonaws.com/images/blue%2Bbox%2Bfull.svg"],
+      "@id": "https://unifiedhealth.com",
+      "name": "Unified Health",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "13621 NW 12th Street",
+        "addressLocality": "Sunrise",
+        "addressRegion": "FL",
+        "postalCode": "33323",
+        "addressCountry": "US"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 26.13660400000001,
+        "longitude": -80.33222900000001
+      },
+      "telephone": "+18559310267",
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+          ],
+          "opens": "08:00:00",
+          "closes": "20:00:00"
+        },
+      ],      
+    }
+  `,
+  }}
+/>
+
+const HeadComponents = [fbPixel, gtag, gtagInlineScript, microdata]
 const PostBodyComponents = [hotjar]
 
 exports.onRenderBody = ({setHeadComponents, setPostBodyComponents}) => {
