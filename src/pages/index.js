@@ -12,7 +12,7 @@ const homeImage = {
 export default function Home({location}) {
   return (
     <Layout>
-      <SEO title="Home" 
+      <SEO title="Medicare Coverage Plans"
       pathname="/"
       image={homeImage} />
       <Medicare />

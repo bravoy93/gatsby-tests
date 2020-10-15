@@ -40,6 +40,9 @@
   justify-content: space-around;
   align-items: flex-start;
 }
+.resourceLinks a {
+  text-decoration: none;
+}
 .resourceLinks p {
   color: #004969;
   cursor: pointer;

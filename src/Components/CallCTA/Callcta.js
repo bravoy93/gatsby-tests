@@ -9,7 +9,7 @@ export default function Callcta(props) {
     prompt_style = `no_prompt ${styles.no_prompt}`;
   }
   return (
-    <div className={`call_wrapper ${styles.call_wrapper}`} style={{minHeight: '360px'}}>
+    <div className={`call_wrapper ${styles.call_wrapper}`}>
       <div className={`call_container ${styles.call_container}`}>
         <p className={prompt_style}>{prompt}</p>
         <h2 className={`call ${styles.call}`}>
